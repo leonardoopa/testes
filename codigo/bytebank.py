@@ -26,14 +26,14 @@ class Funcionario:
         nome_completo = self.nome.strip()
         nome_quebrado = nome_completo.split(" ")
         return nome_quebrado[-1]
-    
+
     def _verificar_socio(self):
         sobrenomes = ["Gabriel", "Leandro", "Davi"]
         return self.salario >= 100000 and (self.sobrenome() in sobrenomes)
 
     def decrescimo_salario(self):
         if self._verificar_socio():
-            decrescimo = self._salario *0.1
+            decrescimo = self._salario * 0.1
             self._salario = self._salario - decrescimo
         return self._salario
 
