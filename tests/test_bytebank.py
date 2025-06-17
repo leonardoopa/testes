@@ -22,7 +22,7 @@ class TestClass:
         resultado = funcionario_test.sobrenome()  # When ação
 
         assert resultado == esperado  # Then desfecho
-    
+
     def test_decrescimo_salario_recebe_100000_deve_retornar_90000(self):
         entrada_salario = 100000
         entrada_nome = "Gabriel"
@@ -35,14 +35,13 @@ class TestClass:
 
     @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
-        entrada = 1000    # Given esperado
+        entrada = 1000  # Given esperado
         esperado = 100
 
         funcionario_test = Funcionario("Gabriel", "01/01/2003", entrada)
-        resultado = funcionario_test.calcular_bonus() # When ação
+        resultado = funcionario_test.calcular_bonus()  # When ação
 
-        assert resultado == esperado # Then desfecho
-
+        assert resultado == esperado  # Then desfecho
 
     def test_quando_calcular_bonus_recebe_10000000_deve_retornar_expt(self):
         with pytest.raises(Exception):
@@ -50,6 +49,5 @@ class TestClass:
             entrada = 10000000
 
             funcionario_test = Funcionario("Gabriel", "01/01/2003", entrada)
-        
-            funcionario_test.calcular_bonus()
 
+            funcionario_test.calcular_bonus()
